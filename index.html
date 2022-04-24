@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/598e8ee044.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Momentum</title>
+    </head>
+    <body>
+        <form id="login-form">
+            <p>Hello😊</p>
+            <div>
+                <input
+                    required
+                    maxlength="15"
+                    type="text"
+                    placeholder="What is your name?"
+                />
+                <button>ENTER</button>
+            </div>
+        </form>
+        <section id="wrapper" class="hidden">
+            <section class="contents1">
+                <div class="profile">
+                    <div>
+                        :)<br />Welcome😊<br />
+                        <span class="userName"></span>
+                    </div>
+                </div>
+                <div class="clock-wrap">
+                    <span class="hour"></span>
+                    :
+                    <span class="min"></span>
+                    :
+                    <span class="sec"></span>
+                </div>
+            </section>
+            <section class="contents2">
+                <h2>
+                    <span class="date"></span><br />
+                    <span class="month"></span>
+                </h2>
+                <div id="weather">
+                    <div>
+                        <img class="weather-icon" />
+                        <span class="weather"></span>
+                        <div class="temp-wrap">
+                            <span class="temp_min"></span>
+                            <span>|</span>
+                            <span class="temp_max"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-pin"></i>
+                        <span class="location"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="contents3">
+                <div class="quote-wrap">
+                    <div id="quote">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="todo-wrap">
+                    <h2>TO DO LIST</h2>
+                    <form id="todo-form">
+                        <input
+                            type="text"
+                            placeholder="Write a To Do and press Enter."
+                            required
+                        />
+                    </form>
+                    <div class="todo-result">
+                        <ul id="todo-list"></ul>
+                        <div class="todo-status">
+                            <div>
+                                TOTAL 🌟
+                                <span class="todo-total"></span>
+                            </div>
+                            <div>
+                                DOING 📝
+                                <span class="todo-doing"></span>
+                            </div>
+                            <div>
+                                DONE 🎉
+                                <span class="todo-done"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <script src="js/greetings.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+</html>
