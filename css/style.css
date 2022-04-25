@@ -160,7 +160,7 @@ i {
 }
 .quote-wrap {
     height: 30vh;
-    background: url(../img/0.jpg) no-repeat top center / cover;
+    background: url(../img/0.jpg) no-repeat center / cover;
     font-weight: 700;
     font-size: 1.4rem;
     display: flex;
