@@ -35,10 +35,13 @@
         <section id="wrapper" class="hidden">
             <section class="contents1">
                 <div class="profile">
-                    <div>
-                        :)<br />Welcome😊<br />
-                        <span class="userName"></span>
-                    </div>
+                    <div class="avatar md"></div>
+                    <p>
+                        Welcome<span class="random-emoji"></span><br /><span
+                            class="userName"
+                        ></span
+                        ><button class="edit-btn">⚙️</button>
+                    </p>
                 </div>
                 <div class="clock-wrap">
                     <span class="hour"></span>
@@ -81,7 +84,7 @@
                     <form id="todo-form">
                         <input
                             type="text"
-                            placeholder="Write a To Do and press Enter."
+                            placeholder="Write a to do and press Enter."
                             required
                         />
                     </form>
@@ -89,22 +92,35 @@
                         <ul id="todo-list"></ul>
                         <div class="todo-status">
                             <div>
-                                TOTAL 🌟
-                                <span class="todo-total"></span>
+                                TOTAL🌟
+                                <span class="todo-total">0</span>
                             </div>
                             <div>
-                                DOING 📝
-                                <span class="todo-doing"></span>
+                                DOING📝
+                                <span class="todo-doing">0</span>
                             </div>
                             <div>
-                                DONE 🎉
-                                <span class="todo-done"></span>
+                                DONE🎉
+                                <span class="todo-done">0</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
+
+        <div class="edit-popup hidden">
+            <div class="popup">
+                <form id="edit-form">
+                    <p>이름을 수정하시겠습니까?</p>
+                    <input type="text" />
+                </form>
+                <div class="btn-wrap">
+                    <button class="cancel-btn">CANCEL</button>
+                    <button class="agree-btn">AGREE</button>
+                </div>
+            </div>
+        </div>
 
         <script src="js/greetings.js"></script>
         <script src="js/clock.js"></script>

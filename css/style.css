@@ -1,3 +1,8 @@
+html,
+body {
+    font-size: 16px;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -10,6 +15,12 @@ body {
 
 i {
     margin-right: 10px;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
 }
 
 #wrapper {
@@ -77,16 +88,35 @@ i {
     height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    font-weight: 700;
-    font-size: 3.5rem;
-    padding: 50px 0 0 50px;
+    font-weight: 500;
+    font-size: 1.8rem;
     box-sizing: border-box;
+    text-align: center;
+}
+
+.avatar {
+    width: 12rem;
+    height: 12rem;
+    background-color: #fff;
+    border: #dfdfde 0.6rem solid;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 .userName {
     display: inline-block;
-    margin-top: 30px;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.edit-btn {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    padding: 5px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .clock-wrap {
@@ -180,11 +210,9 @@ i {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem;
 }
 
-#quote span:first-child {
-    font-size: 1.8rem;
-}
 #quote span:last-child {
     margin-top: 30px;
     font-weight: normal;
@@ -299,4 +327,67 @@ i {
 
 .todo-status > div > span {
     font-size: 1.8rem;
+}
+
+/* edit-popup */
+.edit-popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 30%;
+    height: 30vh;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.popup p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.popup input {
+    width: 100%;
+    outline: 0;
+    padding: 5px 0;
+    margin: 0;
+    border: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    line-height: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.popup button {
+    width: 45%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #8d8daa;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.popup .agree-btn {
+    background-color: #eb285c;
 }
