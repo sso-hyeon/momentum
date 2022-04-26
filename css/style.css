@@ -21,6 +21,7 @@ button {
     outline: none;
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 #wrapper {
@@ -92,9 +93,10 @@ button {
     align-items: center;
     color: #fff;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     box-sizing: border-box;
     text-align: center;
+    padding: 1.5rem;
 }
 
 .avatar {
@@ -107,8 +109,9 @@ button {
 }
 .userName {
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
+    margin-top: 0.6rem;
 }
 
 .edit-btn {
@@ -157,7 +160,13 @@ button {
 .contents2 > h2 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 80px;
+}
+
+.contents2 > .current-date {
+    display: inline-block;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
 }
 
 #weather > div {
@@ -340,7 +349,7 @@ button {
 
 .popup {
     width: 30%;
-    height: 30vh;
+    height: 35vh;
     background-color: #fff;
     position: absolute;
     left: 50%;
@@ -364,10 +373,10 @@ button {
 .popup input {
     width: 100%;
     outline: 0;
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 0;
     border: 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     line-height: 2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -380,7 +389,7 @@ button {
 }
 .popup button {
     width: 45%;
-    padding: 10px 0;
+    padding: 15px 0;
     border-radius: 5px;
     background-color: #8d8daa;
     font-size: 1.2rem;

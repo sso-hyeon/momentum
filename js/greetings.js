@@ -34,7 +34,7 @@ function paintGreetings(username) {
     wrapper.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText = `${username}`;
 
-    const url = "https://avatars.dicebear.com/api/croodles/" + username + ".svg";
+    const url = "https://avatars.dicebear.com/api/croodles-neutral/" + username + ".svg";
     fetch(url).then(response => {
         const avatar = document.querySelector(".avatar");
         avatar.innerHTML = `<img src="${response.url}" />`;
@@ -57,6 +57,7 @@ if (savedUsername === null) {
 
 function editUserName() {
     editPopup.classList.remove("hidden");
+    editInput.focus();
 }
 
 function onEditSubmit(e) {

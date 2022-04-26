@@ -1,12 +1,11 @@
 const clock = document.querySelector("#clock");
-const nowHours = document.querySelector(".hour");
-const nowMinutes = document.querySelector(".min");
-const nowSeconds = document.querySelector(".sec");
+const hours = document.querySelector(".hour");
+const minutes = document.querySelector(".min");
+const seconds = document.querySelector(".sec");
 
-const nowDate = new Date().getDate();
-const nowMonth = new Intl.DateTimeFormat("en-US", { month: "long" }).format(new Date());
 const date = document.querySelector(".date");
 const month = document.querySelector(".month");
+const currDate = document.querySelector(".current-date");
 
 window.addEventListener("load", function () {
     printDate();
@@ -15,17 +14,23 @@ window.addEventListener("load", function () {
 });
 
 function printDate() {
-    date.innerText = nowDate;
-    month.innerText = nowMonth;
+    const newDate = new Date();
+    const y = newDate.getFullYear();
+    const m = String(newDate.getMonth()).padStart(2, "0");
+    const enMonth = new Intl.DateTimeFormat("en-US", { month: "long" }).format(newDate);
+    const d = String(newDate.getDate()).padStart(2, "0");
+    date.innerText = newDate.getDate();
+    month.innerText = enMonth;
+    currDate.innerText = `${y}.${m}.${d}`;
 }
 
 function getClock() {
     const date = new Date();
 
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
-    nowHours.innerText = hours;
-    nowMinutes.innerText = minutes;
-    nowSeconds.innerText = seconds;
+    const h = String(date.getHours()).padStart(2, "0");
+    const m = String(date.getMinutes()).padStart(2, "0");
+    const s = String(date.getSeconds()).padStart(2, "0");
+    hours.innerText = h;
+    minutes.innerText = m;
+    seconds.innerText = s;
 }
